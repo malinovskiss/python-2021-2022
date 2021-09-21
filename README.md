@@ -1,24 +1,35 @@
 <<<<<<< HEAD
 =======
 # python-2021-2022
-#mainīgais numbers
+#mainīgais bibliotēka
 
-num1 = 6 #int
-num2 = 3.5 #loat
+# {}, katrai vērtībai ir sava atslēga
 
-sum = num1 + num2
+pirmais = {'atsli':'vert1','atsl2' :'vert2'}
+print(pirmais)
 
-print (sum)
+print(pirmais['atsl1'])
 
-print(str(num1) + "plus" + str(num2) + "vienāds ar" +str(sum))
+otrais = {'atsl1':[1,2,3], 'atsl2':'Teksts' ,'atsl3' :5}
 
-print(num1, "plus" , num2, "vienāds ar" , sum)
+print(otrais)['atsl1'],otrais['atsl3'])
 
-#ievade
+tresais = {'Mācību priekšmeti' :{'Matemātika':5, 'Latviešu valoda':[6, 8, 5],'Programmēšana' :4{}
 
-num1 = int(input("ievadi skaitli: "))
-num2 = int(input("ievadi otro skaitli: "))
-sum = num1+num2
+print(tresais['Mācību priekšmeti']['Latviešu valoda'][2])
 
-print(sum)
->>>>>>> 2a733b787ada99b7e1b88410eb22eb8ad16bf1da
+#Tukšas bibliotēkas izveide
+
+pirmais = {}
+pirmais['koks'] = 'bērzs'
+pirmais ['ūdenstilpne'] = 'upe'
+
+tresais['Mācību priekšmeti']['Matemātika'] [1]= 'upe'
+print(tresais)
+
+print(pirmais)
+
+print(pirmais.keys())
+print(pirmais.values())
+
+print(pirmais.items())
