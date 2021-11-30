@@ -6,14 +6,14 @@ for i in a:
 
    print(list)
 
-for i in a:
+for i in veidi:
     print(i)
 print(17%5)
-for i in a:
+for i in daudzums:
     if i%2 ==0:
         print(i)
-for i in a:
+for i in dienas:
       if i % 2 ==0:
           print(i)
 else:
-        print('nav otrais skaitlis')
+        print('trenins')
