@@ -27,4 +27,21 @@ print(type(personas))
 for persona in personas:
     print(persona["Vārds"])
 
-file = open("meginajums.txt", "w", encoding = "utf-8")    
+file = open("meginajums.txt", "w", encoding = "utf-8")
+
+file.write("MESSI")
+
+saturs = ["ir 2022 gads /n"]
+
+file.writelines(saturs)
+
+file.close()
+
+with open("meginajums.txt","r", encoding="utf-8") in file:
+
+    print(file.read())
+    print(file.readline())
+
+    file.read(0)
+
+    print(file.readline())
