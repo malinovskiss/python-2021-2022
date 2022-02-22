@@ -1,35 +1,62 @@
-vārdnīca = {"Vārds":"Nauris","uzvārds":"Skuja","vecums":45,"Telefona numurs":"27798261"}
-
-print (vārdnīca)
-print(type(vārdnīca))
-print(vārdnīca["Vārds"])
-
-personas = [
-    {"Vārds":"Nauris","uzvārds":"Skuja","vecums":45,"Telefona numurs":"27798261"},
-    {"Vārds":"Viesturs","izglītība":"Augstākā","Vecums":27,"Telefona numurs":"27798261"}
-]
-
-print(type(personas))
-
-for persona in personas:
-    print(persona["Vārds"])
-
-    #Savaktie dati jasaglaba faila 'ievaktieDati.json'
+#Dati, kurus ievadīs:
+#Vārds
+#Uzvārds
+#Vecums
+#Telefona numurs
 
 import json
-vards = input('ievadit vardu:')
-uzvards = input('ievadit uzvardu:')
-vecums = input('ievadit vecumu:')
-tel = input('ievadit telefona numuru:')
 
-vardnica = {
-    'Vards':vards,
-    'Uzvards':uzvards,
-    'Vecums':vecums,
-    'Telefona Numurs':tel
+vards = input("Ievadi vārdu: ")
+uzvards = input("Ievadi uzvārdu: ")
+vecums = input("Ievadi vecumu: ")
+tel_nr = input("Ievadi telefona numuru: ")
+
+#Dati jāsaglabā vārdnīcā ({})
+
+ievad_dati = {
+    "Uzvārds":uzvards,
+    "Vecums":vecums,
+    "Telefona numurs":tel_nr
 }
 
-def dati(vards,uzvards,vecums,tel):
-    with open('ievaktieDati.json','w',encoding='utf-8') as file:
-        json.dump(vardnica,file,indent=4,ensure_ascii=False)
-dati(vards,uzvards,vecums,tel)
+with open("ievaktieDati.json","r", encoding="utf-8") as fails:
+    json_data = json.load(fails)
+
+    ir_saraksta =False
+    for key in json_data.keys():
+        if key == vards:
+            break
+        if key != vards:
+            ir_saraksta = True
+
+    if ir_saraksta == False:
+        print("Vārds ir sarakstā")
+    else:
+        json_data[vards]=ievad_dati
+
+#Savaktie dati jasaglaba faila 'ievaktieDati.json'
+
+with open("ievaktieDati.json","w", encoding="utf-8") as fails:
+    json.dump(json_data,fails, indent = 4, ensure_ascii=False) 
+
+{
+    "Vards": "Annnika",
+    "Vecums": 30,
+    "Dzives vieta": true,
+    "NeDzivs": false,
+    "Berni": [
+        "Gatis",
+        "Anna"
+    ],
+    "Gramatas": null,
+    "Masinas": [
+        {
+            "Modelis": "Ford Focus",
+            "Gads": 2007
+        },
+        {
+            "Modelis": "Audi A6",
+            "Gads": 2010
+        }
+    ]
+} 
