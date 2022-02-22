@@ -6,10 +6,10 @@
 
 import json
 
-vards = input("Ievadi vārdu: ")
-uzvards = input("Ievadi uzvārdu: ")
-vecums = input("Ievadi vecumu: ")
-tel_nr = input("Ievadi telefona numuru: ")
+vards = input("Ievadi vārdu:")
+uzvards = input("Ievadi uzvārdu:")
+vecums = input("Ievadi vecumu:")
+tel_nr = input("Ievadi telefona numuru:")
 
 #Dati jāsaglabā vārdnīcā ({})
 
