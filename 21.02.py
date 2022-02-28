@@ -6,10 +6,37 @@
 
 import json
 
-vards = input("Ievadi vārdu:")
-uzvards = input("Ievadi uzvārdu:")
-vecums = input("Ievadi vecumu:")
-tel_nr = input("Ievadi telefona numuru:")
+vards = input("Ievadi vārdu: ")
+uzvards = input("Ievadi uzvārdu: ")
+vecums = input("Ievadi vecumu: ")
+tel_nr = input("Ievadi telefona numuru: ")
+
+def check_if_digit(a):
+    if a.isdigit():
+        return True
+    else:
+        return False
+def check_lenght(a):
+    if len(a)<8:
+        return False
+    else:
+        return True
+
+while True:
+    vards= input("Ievadi uzvārdu: ")
+    if check_if_digit(uzvards) or check_if_digit(uzvards):
+        continue
+    else:
+        break
+
+while True:
+    vecums = input("Ievadi vecumu: ")
+    if check_if_digit(vecums):
+        break
+    else:
+        break
+
+
 
 #Dati jāsaglabā vārdnīcā ({})
 
@@ -42,13 +69,13 @@ with open("ievaktieDati.json","w", encoding="utf-8") as fails:
 {
     "Vards": "Annnika",
     "Vecums": 30,
-    "Dzives vieta": true,
-    "NeDzivs": false,
+    "Dzives vieta": True,
+    "NeDzivs": False,
     "Berni": [
         "Gatis",
         "Anna"
     ],
-    "Gramatas": null,
+    "Gramatas": True,
     "Masinas": [
         {
             "Modelis": "Ford Focus",
