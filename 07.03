@@ -1,0 +1,15 @@
+SELECT * FROM "burgeri"
+/*
+WHERE "gala" > 30
+AND "zalumi" > 0
+OR "burger-id" = 2
+*/
+/*
+WHERE "nosaukums" lIKE "%burgers"
+ORDER BY "zalumi" DESC --ASC
+LIMIT 1
+*/
+JOIN "cenas"
+ON "burgeri"."burger-id" = "cenas"."ediena-id"
+WHERE BY "cena" DESC
+--Komentārs
