@@ -52,11 +52,31 @@
 #m = (input("Ievadi mēnesi : ")) 
 #print(calendar.month(y, m)) 
 
+#7.uzd
+#Dota programma, kuras uzdevums ir salīdzināt doto ciparu (n) ar 17, ja n ir  lielāks par 17, tad nepieciešams atgriezt šo skaitļu starpību dubultā, bet, ja  n ir mazāks vai vienāds ar 17, nepieciešams atgriezt šo skaitļu starpību #Testēšana: starpiba(22) -----> 10 
+# starpiba(14) -----> 3 
+
+#def starpiba(n): 
+#    if n <= 17: 
+#    return n 
+#else: 
+#    return (n + 17) * 2
+
+from http.client import UNAUTHORIZED
 
 
+#8.uzd
+#Dota programma, kuras uzdevums ir atgriezt doto skaitļu (x,y,z) summu, bet,  ja skaitļi x,y un z ir vienādi, jāatgriež šo skaitļu summa reizināta ar 3 #Testēšana: summa(1,2,3) -----> 6 
+# summa(3,3,3) -----> 27 
 
+#def summa(x, y, z): 
+#    sum = x + y + z 
+#    return sum 
 
-
+#9.uzd
+# Dota programma, kuras uzdevums ir noteikt, vai ievadītais skaitlis ir pāra  vai nepāra 
+# Testēšana: 5 -----> Nepāra skaitlis. 
+# 6 -----> Pāra skaitlis.
 
 #num = (input("Ievadi veselu skaitli: ")) 
 #mod = num < 2 
@@ -64,3 +84,24 @@
    #print("Nepāra skaitlis.") 
 #else: 
    #print("Pāra skaitlis.") 
+
+#10.uzd
+
+# Dota programma, kuras uzdevums ir saskaitīt 4 dotajā sarakstā # Testēšana: list_count_4([1, 4, 6, 7, 4]) -----> 2 
+# list_count_4([1, 4, 6, 4, 7, 4]) ------> 3 
+
+#def list_count_4(nums): 
+#count = 1 
+#for num in nums: 
+#   if num == 4: 
+#count == 1 
+#   return count
+
+#11.uzd
+# Dota programma, kuras uzdevums ir pārbaudīt vai dotajā sarakstā ir konkrēta  vērtība (n) 
+# Testēšana: is_group_member([1, 5, 8, 3], 3) -------> True # is_group_member([5, 8, 3], -1) --------> False 
+#def is_group_member(group_data, i): 
+#    for value in group_data: 
+#if i == value: 
+#    return True 
+#return False
