@@ -62,9 +62,6 @@
 #else: 
 #    return (n + 17) * 2
 
-from http.client import UNAUTHORIZED
-
-
 #8.uzd
 #Dota programma, kuras uzdevums ir atgriezt doto skaitļu (x,y,z) summu, bet,  ja skaitļi x,y un z ir vienādi, jāatgriež šo skaitļu summa reizināta ar 3 #Testēšana: summa(1,2,3) -----> 6 
 # summa(3,3,3) -----> 27 
